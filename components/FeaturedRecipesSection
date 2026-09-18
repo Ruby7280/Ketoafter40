@@ -1,0 +1,84 @@
+import RecipeCard from './RecipeCard'
+
+const demoRecipes = [
+  {
+    id: 1,
+    title: 'Salmon Avocado Omelet',
+    prepTime: 15,
+    servings: 2,
+    carbs: 8,
+  },
+  {
+    id: 2,
+    title: 'Garlic Butter Shrimp with Zucchini Noodles',
+    prepTime: 20,
+    servings: 2,
+    carbs: 7,
+  },
+  {
+    id: 3,
+    title: 'Creamy Tomato Basil Chicken Thighs',
+    prepTime: 30,
+    servings: 4,
+    carbs: 6,
+  },
+  {
+    id: 4,
+    title: 'Cauliflower Rice Fried Rice with Egg',
+    prepTime: 18,
+    servings: 2,
+    carbs: 9,
+  },
+  {
+    id: 5,
+    title: 'Spinach and Feta Egg Muffins',
+    prepTime: 25,
+    servings: 6,
+    carbs: 3,
+  },
+  {
+    id: 6,
+    title: 'Cheddar Broccoli Beef Skillet',
+    prepTime: 22,
+    servings: 3,
+    carbs: 5,
+  },
+]
+
+export default function FeaturedRecipesSection() {
+  return (
+    <section id="recipes" className="py-16 md:py-20 bg-warm-cream">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="font-serif-display text-heading-lg text-charcoal mb-4">
+            Simple Recipes You'll Actually Make
+          </h2>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            Easy, delicious low-carb recipes for every meal of the day.
+          </p>
+        </div>
+
+        {/* Recipe Grid - DEMO CONTENT */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {demoRecipes.map((recipe) => (
+            <RecipeCard
+              key={recipe.id}
+              title={recipe.title}
+              prepTime={recipe.prepTime}
+              servings={recipe.servings}
+              carbs={recipe.carbs}
+            />
+          ))}
+        </div>
+
+        {/* Browse link */}
+        <div className="text-center">
+          <button className="text-brand-teal font-semibold hover:text-brand-teal-dark transition inline-flex items-center gap-2">
+            Browse All Recipes →
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}
