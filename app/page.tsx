@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "../public/keto-hero.webp";
+import LeadMagnetForm from "../components/LeadMagnetForm";
 
 export default function Home() {
   return (
@@ -594,18 +595,12 @@ export default function Home() {
           planning what to eat.
         </p>
 
-        <a
-          href="/free-7-day-low-carb-meal-plan.pdf"
-          download
-          className="mx-auto mt-9 inline-flex min-h-14 items-center justify-center rounded-full bg-[#1f3839] px-8 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#172d2e] focus:outline-none focus:ring-4 focus:ring-white/30"
-        >
-          Download the Free Plan
-        </a>
+        <LeadMagnetForm />
 
         <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70">
           <span>✓ Free 7-day plan</span>
           <span>✓ Beginner friendly</span>
-          <span>✓ Instant PDF download</span>
+          <span>✓ Private PDF access</span>
         </div>
       </div>
     </div>
